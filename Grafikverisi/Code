@@ -1,0 +1,27 @@
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# CSV dosyasını oku
+file_path = "C:\\Users\\90551\\Downloads\\trace_data.csv"
+
+
+df = pd.read_csv(file_path)
+
+# Veriyi görüntüle
+st.write("Veri Seti:")
+st.write(df.head())
+
+# Örnek görselleştirme (x ve y eksenleri için uygun sütunları seç)
+x_column = st.selectbox("X ekseni için sütun seçin", df.columns)
+y_column = st.selectbox("Y ekseni için sütun seçin", df.columns)
+
+# Grafik oluşturma
+fig, ax = plt.subplots()
+ax.plot(df[x_column], df[y_column])
+
+# Grafik başlığı ekleme
+ax.set_title(f"{x_column} vs {y_column}")
+
+# Grafiği Streamlit'te göster
+st.pyplot(fig)
