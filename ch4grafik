@@ -1,0 +1,27 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+# Data for CH4 emissions from 1990 to 2021
+data = {
+    'Year': [1990, 1995, 2000, 2005, 2010, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+    'Emissions (Thousand Tonnes)': [
+        1699.5, 1704.5, 1746.7, 1806.9, 
+        2065.8, 2111.4, 2223.3, 2272.7, 
+        2416.4, 2528.7, 2555.8, 2560.8
+    ]
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Streamlit application title
+st.title("CH₄ Emissions from 1990 to 2021")
+
+# Create a line chart using Plotly
+fig = px.line(df, x='Year', y='Emissions (Thousand Tonnes)', 
+              title='CH₄ Emissions Over the Years', 
+              markers=True)
+
+# Display the chart in Streamlit
+st.plotly_chart(fig)
