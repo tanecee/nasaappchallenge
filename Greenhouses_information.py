@@ -131,3 +131,28 @@ with st.expander("Question 3: What can we do to reduce greenhouse gas emissions?
 
 with st.expander("Question 4: What are the effects of greenhouse gases on climate change?"):
     st.write("**Answer**: Greenhouse gases cause global temperatures to rise, sea levels to increase, and the frequency of extreme weather events to intensify.")
+    
+# Text area for feedback input
+feedback = st.text_area("**Submit Your Solutions for Greenhouse Gases and Feedback for the Site:**", "")
+
+# Submit button for feedback
+if st.button("Submit"):
+    if feedback:
+        # Here, you can add the feedback to a data structure for storage
+        # For example, we can temporarily use a list
+        try:
+            # Create a DataFrame to store feedback
+            if 'feedbacks' not in st.session_state:
+                st.session_state['feedbacks'] = []
+
+            # Save the feedback
+            st.session_state['feedbacks'].append(feedback)
+
+            # Success message for the user
+            st.success("Your feedback has been successfully recorded!")
+        except Exception as e:
+            st.error(f"An error occurred while recording your feedback: {e}")
+    else:
+        st.warning("Please enter your feedback.")
+
+# Display
