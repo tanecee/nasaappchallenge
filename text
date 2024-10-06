@@ -1,0 +1,12 @@
+import streamlit as st
+
+st.markdown("**Greenhouse gases** are gases that contribute to the warming of the Earth by trapping heat in the atmosphere; among them, carbon dioxide and methane are the most significant.")
+st.markdown("**Carbon Dioxide (CO2)**: It is the most common greenhouse gas. Human activities such as the burning of fossil fuels (coal, oil, natural gas) and deforestation increase CO2 emissions.")
+st.markdown("**CH4**: It is a stronger greenhouse gas compared to carbon dioxide. It is released into the atmosphere through natural gas production, agricultural activities (especially livestock farming), and the decomposition of organic waste in landfills.")
+st.markdown("### **How Are Greenhouse Gases Produced?**\n\n" 
+         "1. **Burning of Fossil Fuels**: The consumption of fuel in vehicles and the use of coal for electricity generation result in carbon dioxide emissions.\n" 
+         "2. **Agricultural Activities**: Livestock farming produces methane gas, while the use of fertilizers leads to nitrous oxide emissions.\n" 
+         "3. **Industrial Production**: Carbon dioxide and fluorinated gases are released during chemical processes and the production of certain products.\n" 
+         "4. **Waste**: The decomposition of organic waste in landfills produces methane gas.\n"
+         "**alt**: Greenhouse gases can also come from natural sources such as volcanic eruptions and the respiration of animals.\n"
+         "**alt**: Additionally, the burning of biomass and wildfires can release significant amounts of carbon dioxide and other greenhouse gases.")
